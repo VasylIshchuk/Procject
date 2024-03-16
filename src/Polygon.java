@@ -18,6 +18,6 @@ public class Polygon {
         for(Point point : points){
             pointsString += point.x +","+point.y+" ";
         }
-        return String.format(Locale.ENGLISH,"<line points=\"%s\"%s />",pointsString,style.toSvg());
+        return String.format(Locale.ENGLISH,"<polygon points=\"%s\"%s />",pointsString,style.toSvg());
     }
 }
