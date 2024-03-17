@@ -18,7 +18,8 @@ public class Segment {
         return Math.sqrt(resultX * resultX + resultY * resultY);//return Math.hypot(p1.x - p2.x, p1.y - p2.y);
     }
     public String toSvg() {
-        return String.format(Locale.ENGLISH,"<line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" style=\"stoke:blue,stoke-width:2\" />"
+        return String.format(Locale.ENGLISH,"<line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\"" +
+                " style=\"stoke:blue,stoke-width:2\" />"
                 , point1.x, point1.y, point2.x, point2.y);
     }
     public static Segment[] perpendicular(Segment line, Point point, double r) {
