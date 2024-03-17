@@ -1,15 +1,15 @@
 
 import java.util.Locale;
 public class Segment {
-    private Point point1, point2;
-    public Segment(Point point1, Point point2) {
+    private Vec2 point1, point2;
+    public Segment(Vec2 point1, Vec2 point2) {
         this.point1 = point1;
         this.point2 = point2;
     }
-    public Point getPoint1() {
+    public Vec2 getPoint1() {
         return point1;
     }
-    public Point getPoint2() {
+    public Vec2 getPoint2() {
         return point2;
     }
     public double lengthSection() {
@@ -22,7 +22,7 @@ public class Segment {
                 " style=\"stoke:blue,stoke-width:2\" />"
                 , point1.x, point1.y, point2.x, point2.y);
     }
-    public static Segment[] perpendicular(Segment line, Point point, double r) {
+    public static Segment[] perpendicular(Segment line, Vec2 point, double r) {
         double a;
         a = (line.point1.y - line.point2.y) / (line.point1.x - line.point2.x);//y=kx+b; y=ax+b; a = (Y1 - Y2) / (X1 - X2)
         double b;
@@ -38,6 +38,6 @@ public class Segment {
         double x2 = (root+a*y0+x0-a*b)/(a*a+1);
         double y2 = (a*root+a*a*y0+a*x0+b)/(a*a+1);
 
-        return new Segment[]{new Segment(point, new Point(x1,y1)), new Segment(point, new Point(x2,y2))};
+        return new Segment[]{new Segment(point, new Vec2(x1,y1)), new Segment(point, new Vec2(x2,y2))};
     }
 }
