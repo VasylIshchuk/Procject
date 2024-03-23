@@ -29,7 +29,7 @@ public class Polygon implements Shape {
         for(Vec2 point : points){
             pointsString += point.x +","+point.y+" ";
         }
-        return String.format(Locale.ENGLISH,"<polygon points=\"%s\" %s />",pointsString,parameter);
+        return String.format(Locale.ENGLISH,"<polygon points=\"%s\" %s />",pointsString,parameter);//style.toSvg()
     }
     public static Polygon square(Segment line, Style style){
         double x=(line.getPoint1().x+ line.getPoint2().x)/2;

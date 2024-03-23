@@ -1,9 +1,9 @@
 import java.util.Locale;
 
-public class SolidFilledPolygon extends Polygon{
+public class SolidFillShapeDecorator extends ShapeDecorator{
     private String color;
-    public SolidFilledPolygon(Vec2[] points, String color) {
-        super(points, new Style("blue","black",5.0));
+    public SolidFillShapeDecorator(Shape decoratedShape,String color) {
+        super(decoratedShape);
         this.color=color;
     }
 
