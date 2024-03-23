@@ -24,12 +24,12 @@ public class Polygon implements Shape {
             System.out.println(point.x +" "+ point.y );
         }
     }
-    public String toSvg(){
+    public String toSvg(String parameter){
         String pointsString = "";
         for(Vec2 point : points){
             pointsString += point.x +","+point.y+" ";
         }
-        return String.format(Locale.ENGLISH,"<polygon points=\"%s\"%s />",pointsString,style.toSvg());
+        return String.format(Locale.ENGLISH,"<polygon points=\"%s\" %s />",pointsString,parameter);
     }
     public static Polygon square(Segment line, Style style){
         double x=(line.getPoint1().x+ line.getPoint2().x)/2;

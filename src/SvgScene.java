@@ -11,7 +11,7 @@ public class SvgScene {
     public void saveHtml(String path){
         String image ="<svg height=\"220\" width=\"500\">";
         for (Shape shape : shapes){
-            image +=shape.toSvg();
+            image +=shape.toSvg("");
         }
         image+="</svg>";
         try {
