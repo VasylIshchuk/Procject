@@ -2,13 +2,11 @@ import java.util.Locale;
 
 public class Ellipse implements Shape{
     private Vec2 center;
-    private double rx,ry;
-    private Style style;
-    public Ellipse( double rx, double ry, Vec2 center, Style style) {
+    private double rx,ry;//private Style style;
+    public Ellipse( double rx, double ry, Vec2 center) { //, Style style
         this.rx = rx;
         this.ry = ry;
-        this.center = center;
-        this.style=style;
+        this.center = center;//this.style=style;
     }
     @Override
     public String toSvg(String parameter) {

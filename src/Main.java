@@ -4,16 +4,21 @@ public class Main {
         Vec2 point1 = new Vec2(0,100);
         Vec2 point2 = new Vec2(100,102);
         Vec2 point3 = new Vec2(50,50);
-        Style style = new Style("pink","blue",2.0);
 
-        Shape ellipse = new Ellipse(100,50,new Vec2(120,80),style);
-        Shape polygon = new Polygon(new Vec2[]{point1,point2,point3},style);
-        SolidFillShapeDecorator solidFilledPolygon =new SolidFillShapeDecorator(polygon,"violet");
-        SolidFillShapeDecorator solidFilledEllipse =new SolidFillShapeDecorator(ellipse,"yellow");
+        Shape ellipse = new Ellipse(100,50,new Vec2(120,80));
+        Shape polygon = new Polygon(new Vec2[]{point1,point2,point3});
+
+        //1 method
+        Shape strokeAndSolidFilledPolygon = new StrokeShapeDecorator(new SolidFillShapeDecorator(polygon, "violet"), "black", 3);
+        //the order of decorators is important.
+
+        //2 method
+        Shape strokeAndSolidFilledEllipse =new SolidFillShapeDecorator(ellipse,"yellow");
+        strokeAndSolidFilledEllipse =new StrokeShapeDecorator(strokeAndSolidFilledEllipse,"blue",5);
 
         SvgScene svgScene = new SvgScene();
-        svgScene.addShape(solidFilledEllipse);
-        svgScene.addShape(solidFilledPolygon);
+        svgScene.addShape(strokeAndSolidFilledEllipse);
+        svgScene.addShape(strokeAndSolidFilledPolygon);
         svgScene.saveHtml("./test.html");
     }
 }

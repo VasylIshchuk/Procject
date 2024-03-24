@@ -1,4 +1,4 @@
-import java.util.Locale;
+/*import java.util.Locale;
 
 public class Style {
     public final String fillColor,strokeColor;
@@ -15,4 +15,4 @@ public class Style {
         return String.format(Locale.ENGLISH, " style=\"fill:%s;stroke:%s;stroke-width:%f\" ",
                 this.fillColor,this.strokeColor,this.strokeWidth);
     }
-}
+}*/
