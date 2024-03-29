@@ -29,7 +29,7 @@ public class TransformationDecorator extends ShapeDecorator {
                 " transform=\"%s\"%s",stringBuilder,parameter));
     }
     public static  class Builder  {
-        private  boolean translate=false,rotate=false,scale=false;
+        private  boolean translate=false, rotate=false, scale=false;
         private double rotateAngle;
         private Vec2 translateVector,rotateCenter,scaleVector;
         private Shape shape;

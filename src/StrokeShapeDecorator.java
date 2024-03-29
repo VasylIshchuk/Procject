@@ -12,6 +12,6 @@ public class StrokeShapeDecorator extends ShapeDecorator{
     @Override
     public String toSvg(String parameter) {
         return super.toSvg(String.format(Locale.ENGLISH,
-                "stroke=\"%s\" stroke-width=\"%f\" ",color,width));
+                "stroke=\"%s\" stroke-width=\"%f\" %s",color,width,parameter));
     }
 }
