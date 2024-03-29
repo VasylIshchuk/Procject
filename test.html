@@ -1,4 +1,4 @@
-<svg height="220" width="500"> 
+<svg height="220" width="500" xmlns="http://www.w3.org/2000/svg"> 
 	<defs> 
 	<filter id="f2061475679" x="-100%" y="-100%" width="300%" height="300%">
 		<feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
@@ -10,7 +10,11 @@
 		<feGaussianBlur result="blurOut" in="offOut" stdDeviation="5" />
 		<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
 	</filter>
+	<linearGradient id="g989110044" >
+		<stop offset="0.000000" style="stop-color:yellow" />
+		<stop offset="1.000000" style="stop-color:red" />
+	</linearGradient>
 	</defs> 
-	<polygon points="0.0,100.0 100.0,102.0 50.0,50.0 " fill="violet" stroke="black" stroke-width="3.000000" filter="url(#f2061475679)"  />
-	<ellipse rx="100.000000" ry="50.000000" cx="120.000000" cy="80.000000" transform="translate(50.000000 50.000000) rotate(-10.000000 50.000000 50.000000) scale(1.000000 0.500000) "fill="red" filter="url(#f1927950199)"  />
+	<polygon points="0.0,120.0 160.0,130.0 50.0,50.0 " fill="violet" stroke="black" stroke-width="3.000000" filter="url(#f2061475679)"  />
+	<ellipse rx="100.000000" ry="80.000000" cx="300.000000" cy="120.000000" transform="translate(50.000000 50.000000) rotate(-10.000000 50.000000 50.000000) scale(1.000000 0.500000) "filter="url(#f1927950199)" fill="url(#g989110044)"  />
 </svg> 
